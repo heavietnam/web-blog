@@ -3,54 +3,35 @@ import { version } from "../meta";
 
 export const vi: NavbarConfig = [
   {
-    text: "Home",
+    text: "Giới Thiệu",
     link: "/",
-    icon: "fa-fort-awesome"
+    icon: "io-home"
   },
   {
-    text: "Tags",
+    text: "Tài Nguyên",
+    link: '/resources/',
+    icon: "bi-inboxes-fill",
+    children: [
+      { text: 'EFI', link: 'https://facebook.com/zenfection' },
+      { text: 'Image', link: 'https://facebook.com/zenfection'},
+      { text: 'Tool', link: 'https://facebook.com/zenfection'},
+      { text: 'heavietnam theme', link: 'https://facebook.com/zenfection'},
+    ],
+  },
+  {
+    text: "Tag",
     link: "/tags/",
     icon: "fa-tag"
   },
   {
-    text: "Links",
-    link: "/links/",
-    icon: "fa-satellite-dish"
-  },
-  {
-    text: "Docs",
+    text: "Cài Đặt",
     link: "/docs/basic/intro.md",
-    icon: "ri-book-2-fill"
+    icon: "md-installdesktop-outlined"
   },
   {
-    text: "VuePress",
-    link: "https://v2.vuepress.vuejs.org/",
-    icon: "ri-vuejs-line"
+    text: "Diễn đàn",
+    link: "https://forum.heavietnam.ga",
+    icon: "md-forum-outlined"
   },
-  {
-    text: `v${version}`,
-    icon: "co-git",
-    children: [
-      {
-        text: "GitHub",
-        link: "https://github.com/Renovamen/vuepress-theme-gungnir",
-        icon: "ri-github-line"
-      },
-      {
-        text: "Changelog",
-        link: "https://github.com/Renovamen/vuepress-theme-gungnir/blob/main/CHANGELOG.md",
-        icon: "oi-git-compare"
-      },
-      {
-        text: "v2.x",
-        link: "/docs/intro.md",
-        icon: "oi-rocket"
-      },
-      {
-        text: "v0.x",
-        link: "https://vuepress-theme-gungnir.vercel.app",
-        icon: "ri-sailboat-line"
-      }
-    ]
-  }
+
 ];

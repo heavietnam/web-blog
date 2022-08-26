@@ -1,9 +1,11 @@
 import { defineClientConfig } from "@vuepress/client";
 import { addIcons } from "oh-vue-icons";
 import {
+  IoHome,
+  BiInboxesFill,
+  MdForumOutlined,
+  MdInstalldesktopOutlined,
   CoGit,
-  FaFortAwesome,
-  FaSatelliteDish,
   FaTag,
   OiGitCompare,
   OiRocket,
@@ -15,10 +17,12 @@ import {
 } from "oh-vue-icons/icons";
 
 addIcons(
+  IoHome,
+  BiInboxesFill,
+  MdForumOutlined,
+  MdInstalldesktopOutlined,
   RiBilibiliLine,
-  FaFortAwesome,
   FaTag,
-  FaSatelliteDish,
   RiBook2Fill,
   RiVuejsLine,
   CoGit,

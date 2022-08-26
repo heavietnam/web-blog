@@ -10,93 +10,68 @@ const isProd = process.env.NODE_ENV === "production";
 export default defineUserConfig({
   base: "/",
   head: [
-    [
-      "link",
-      {
-        rel: "icon",
-        type: "image/png",
-        sizes: "16x16",
-        href: `/img/logo/favicon-16x16.png`
-      }
-    ],
-    [
-      "link",
-      {
-        rel: "icon",
-        type: "image/png",
-        sizes: "32x32",
-        href: `/img/logo/favicon-32x32.png`
-      }
-    ],
+    [ "link", { rel: "icon", type: "image/png", sizes: "16x16", href: `/img/logo/favicon-16x16.png` }],
+    ["link", { rel: "icon", type: "image/png", sizes: "32x32", href: `/img/logo/favicon-32x32.png` }],
     ["link", { rel: "manifest", href: "/manifest.webmanifest" }],
     ["meta", { name: "application-name", content: "Gungnir Theme" }],
     ["meta", { name: "apple-mobile-web-app-title", content: "Gungnir Theme" }],
-    [
-      "meta",
-      { name: "apple-mobile-web-app-status-bar-style", content: "black" }
-    ],
-    [
-      "link",
-      { rel: "apple-touch-icon", href: `/img/logo/apple-touch-icon.png` }
-    ],
+    ["meta", { name: "apple-mobile-web-app-status-bar-style", content: "black" }],
+    ["link", { rel: "apple-touch-icon", href: `/img/logo/apple-touch-icon.png` }],
     ["meta", { name: "theme-color", content: "#377bb5" }],
     ["meta", { name: "msapplication-TileColor", content: "#377bb5" }]
   ],
 
-  // site-level locales config
+  // Cấu hình ngôn ngữ trong web
   locales: {
     "/": {
-      lang: "en-US",
-      title: "VuePress Theme Gungnir",
-      description: "A blog theme for VuePress"
+      lang: "vi",
+      title: "Hackintosh Guide",
+      description: "Hướng dẫn cài đặt Hackintosh từ A tới Z"
     },
   },
 
-  // specify bundler via environment variable
+  // chỉ định gói môi trường
   bundler:
     process.env.DOCS_BUNDLER === "webpack" ? webpackBundler() : viteBundler(),
 
-  // configure default theme
+  // cấu hình theme mặc định trên web
   theme: gungnirTheme({
     repo: "heavietnam/blog",
     docsDir: "docs",
+    navbarTitle: "Trang Chủ",
 
-    hitokoto: "https://v1.hitokoto.cn?c=i", // enable hitokoto (一言) or not?
+    //hitokoto: true, //* Tính năng thêm của trung quốc
 
-    // personal information
+    // Thông tin cá nhân
     personalInfo: {
       name: "Heavietnam",
-      avatar: "/img/avatar.jpeg",
+      avatar: "/img/avatar.png",
       description: "Chào mừng đến với heavietnam",
       sns: {
         github: "heavietnam",
-        linkedin: "xiaohan-zou-55bba0160",
+        //linkedin: "heavietnam",
         facebook: "heavietnam",
-        twitter: "renovamen_zxh",
-        email: "renovamenzxh@gmail.com",
+        //twitter: "heavietnam",
+        email: "heavietnam@gmail.com",
       }
     },
 
-    // header images on home page
+    // ảnh background slider trên homepage
     homeHeaderImages: [
       {
-        path: "/img/home-bg/1.jpg",
+        path: "/img/home-bg/1.png",
         mask: "rgba(40, 57, 101, .4)"
       },
       {
-        path: "/img/home-bg/2.jpg",
+        path: "/img/home-bg/2.png",
         mask: "rgb(251, 170, 152, .2)"
       },
       {
-        path: "/img/home-bg/3.jpg",
+        path: "/img/home-bg/3.png",
         mask: "rgba(68, 74, 83, .1)"
       },
-      {
-        path: "/img/home-bg/4.jpg",
-        mask: "rgba(19, 75, 50, .2)"
-      }
     ],
-
+    blogNumPerPage: 20, //* trang chủ có 20 bài viết
     // other pages
     pages: {
       tags: {
@@ -107,8 +82,9 @@ export default defineUserConfig({
         }
       },
       links: {
+        title: 'Heavietnam',
         subtitle:
-          "When you are looking at the stars, please put the brightest star shining night sky as my soul.",
+          "Là 1 trang web về hackintosh  được tạo ra vào ngày 29/9/2021.",
         bgImage: {
           path: "/img/pages/links.jpg",
           mask: "rgba(64, 118, 190, 0.5)"
@@ -118,11 +94,6 @@ export default defineUserConfig({
 
     // theme-level locales config
     locales: {
-      /**
-       * English locale config
-       *
-       * As the default locale is English, we don't need to set all of the locale fields
-       */
       "/": {
         // navbar
         navbar: navbar.vi,
@@ -149,12 +120,12 @@ export default defineUserConfig({
       },
       ga: "G-EE8M2S3MPB",
       ba: "10b7bc420625758a319d6b23aed4700f",
-      rss: {
-        siteURL: "https://v2.vuepress-theme-gungnir.vercel.app",
-        copyright: "Renovamen 2018-2022"
-      },
+      // rss: {
+      //   siteURL: "https://v2.vuepress-theme-gungnir.vercel.app",
+      //   copyright: "Renovamen 2018-2022"
+      // },
       pwa: true,
-      search: false // use @vuepress/plugin-docsearch instead
+      search: true // use @vuepress/plugin-docsearch instead
     },
 
     footer: `
@@ -172,10 +143,15 @@ export default defineUserConfig({
   },
 
   plugins: [
-    docsearchPlugin({
-      appId: "3DDLGP0IG4",
-      apiKey: "6556adaa82b31485309b440a525f264a",
-      indexName: "v2-vuepress-theme-gungnir",
-    })
+    // docsearchPlugin({
+    //   appId: "3DDLGP0IG4",
+    //   apiKey: "6556adaa82b31485309b440a525f264a",
+    //   indexName: "v2-vuepress-theme-gungnir",
+    //   locales: {
+    //     "/": {
+    //       placeholder: "Tìm kiếm"
+    //     }
+    //   }
+    // })
   ]
 });

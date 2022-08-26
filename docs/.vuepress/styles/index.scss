@@ -1,0 +1,14 @@
+.link-item .content a span.sitename{
+  font-size: 1.2rem;
+}
+.link-item .content a .desc{
+  font-size: 15px;
+}
+.link-item .content a img{
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+.link-group{
+  grid-template-columns: repeat(2, 50%) !important;
+}
