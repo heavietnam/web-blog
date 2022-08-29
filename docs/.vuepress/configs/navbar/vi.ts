@@ -25,7 +25,7 @@ export const vi: NavbarConfig = [
   },
   {
     text: "Cài Đặt",
-    link: "/docs/basic/intro.md",
+    link: "/guide/",
     icon: "md-installdesktop-outlined"
   },
   {
