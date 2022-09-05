@@ -51,7 +51,9 @@ export default defineUserConfig({
       description: "Hướng dẫn cài đặt Hackintosh từ A tới Z"
     }
   },
-
+  extendsMarkdown: (md) => {
+    md.linkify.set({ fuzzyEmail: false })
+  },
   // chỉ định gói môi trường
   bundler:
     process.env.DOCS_BUNDLER === "webpack" ? webpackBundler() : viteBundler(),
@@ -143,9 +145,9 @@ export default defineUserConfig({
     themePlugins: {
       // only enable git plugin in production mode
       git: isProd,
-      katex: true,
-      mermaid: true,
-      chartjs: true,
+      katex: false,
+      mermaid: false,
+      chartjs: false,
       giscus: {
         repo: "heavietnam/giscus-comment",
         repoId: "R_kgDOH5vJBA",
@@ -158,7 +160,7 @@ export default defineUserConfig({
         all: true
       },
       //ga: "G-EE8M2S3MPB", google analytics
-      pwa: true,
+      pwa: false,
       search: false, // use @vuepress/plugin-docsearch instead
     },
 
@@ -176,6 +178,7 @@ export default defineUserConfig({
     }
   },
 
+
   plugins: [
     docsearchPlugin({
       appId: "",
@@ -183,7 +186,13 @@ export default defineUserConfig({
       indexName: "",
       locales: {
         "/": {
-          placeholder: "Tìm kiếm"
+          placeholder: 'Gõ từ khoá để tìm kiếm',
+          translations: {
+            button: {
+              buttonText: 'Tìm Kiếm',
+            },
+          },
+
         }
       }
     })

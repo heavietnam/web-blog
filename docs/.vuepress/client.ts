@@ -1,10 +1,12 @@
 import { defineClientConfig } from "@vuepress/client";
 import { addIcons } from "oh-vue-icons";
+
 import {
   IoHome,
   BiInboxesFill,
   MdForumOutlined,
   MdInstalldesktopOutlined,
+  FcSearch,
   CoGit,
   FaTag,
   OiGitCompare,
@@ -21,6 +23,7 @@ addIcons(
   BiInboxesFill,
   MdForumOutlined,
   MdInstalldesktopOutlined,
+  FcSearch,
   RiBilibiliLine,
   FaTag,
   RiBook2Fill,
