@@ -9,7 +9,7 @@ date: 2021-09-30
 
 ### CPU
 
-::: danger CPU AMD
+::: danger <v-icon name="co-amd" scale="4"/>
 
 - Tất cả `CPU AMD` trên **laptop** đều không hỗ trợ cài đặt `Hackintosh`
   
@@ -23,10 +23,10 @@ date: 2021-09-30
   > - Các phần mềm Adobe.
   > - Phần mềm 32-bit.
   > - Và 1 vài app audio.
-
 :::
 
-::: tip CPU Intel
+
+::: info <v-icon name="co-intel" scale="4"/>
 
 - Mọi CPU Intel từ đời [Yonah](https://en.wikipedia.org/wiki/Yonah_(microprocessor)) đều được hỗ trợ
 

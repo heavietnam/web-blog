@@ -1,6 +1,11 @@
-# Cách tạo EFI OpenCore
+---
+title: Cách tạo EFI Opencore
+subtitle: 
+author: Võ Nguyễn Hoàng Long
+date: 2021-11-23
+---
 
-# Chuẩn bị
+## Chuẩn bị
 
 B1: Tải xuống `OpenCorePkg` [tại đây](https://github.com/acidanthera/OpenCorePkg/releases)
 
@@ -29,17 +34,17 @@ B4: Vào file docs và copy file `sample.plist` sau đó đổi tên nó thàn
 
 ![](https://everythingforhackintosher.files.wordpress.com/2021/09/cleanshot-2021-09-12-at-23.41.10.png?w=1024)
 
-## Thêm các kext
+### Thêm các kext
 
 Thêm các kext sau vào EFI ==> OC ==> Kexts
 
-### Các kext bắt buộc
+#### Các kext bắt buộc
 
 - [Lilu](https://github.com/acidanthera/Lilu/releases) : đây là mục kext vô cùng quan trọng nếu không có nó bạn sẽ không thể boot được
 - [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) : đây là kext giúp patch đồ họa
 - [VirtualSMC](https://github.com/acidanthera/VirtualSMC/releases) : dùng để mô phỏng SMC, không có nó bạn sẽ không thể boot được
 
-### Kext không bắt buộc
+#### Kext không bắt buộc
 
 Các plugin của VirtualSMC
 
@@ -105,11 +110,11 @@ Mình khuyến khích bạn thêm 5 kext cơ bản sau đây
 
 1 số máy có thể sẽ cần thêm CpuTscSync
 
-## Thêm các file SSDT
+### Thêm các file SSDT
 
 Các bạn chỉ cần mỗi [SSDT-EC](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-DESKTOP.aml) để boot. nhưng để hoạt động tốt bạn cần nhiều hơn thế nữa, xem chi tiết về SSDT [tại đây](https://heavietnam.ga/2022/03/10/ssdt-recomend/)
 
-## Chỉnh sửa config
+### Chỉnh sửa config
 
 - Mở file `config.plist` bằng [ProperTree](https://github.com/corpnewt/ProperTree) 
 - Chọn File ⇒ OC Snapshot ![](https://lh6.googleusercontent.com/SCT2Gq_55sCnidkxh8Kn2GjrTrkFc-lj0-5v9yBHi_YUZEK9Zy-OLojhKH-VaT_78oZfvBH8gCl-sdLuwnCyBg5RZv4PLtaeWq81Xlg4oRc9G3AiAXvU21W2A0Q8DdcuLZQSH5W8=s0)
@@ -118,7 +123,7 @@ Các bạn chỉ cần mỗi [SSDT-EC](https://github.com/dortania/Getting-Star
 
 Xem cách xác định phần cứng [tại đây](https://heavietnam.ga/2022/04/29/cach-xac-dinh-phan-cung/) sau đó setting config theo hướng dẫn
 
-### Intel Desktop
+#### Intel Desktop
 
 | CODE NAME                                                                                          | SERIES       | PHÁT HÀNH |
 | -------------------------------------------------------------------------------------------------- | ------------ | --------- |
@@ -132,7 +137,7 @@ Xem cách xác định phần cứng [tại đây](https://heavietnam.ga/2022/0
 | [Coffee Lake](https://heavietnam.ga/2022/06/10/config-desktop-coffee-lake/)                        | 8XXX-9XXX    | 2017-2019 |
 | [Comet Lake](https://heavietnam.ga/2022/06/10/config-desktop-comet-lake/)                          | 10XXX        | 2020      |
 
-### Intel Laptop
+#### Intel Laptop
 
 | CODE NAME                                                                                                         | SERIES     | PHÁT HÀNH |
 | ----------------------------------------------------------------------------------------------------------------- | ---------- | --------- |
@@ -162,9 +167,9 @@ Cho skylake và mới hơn
 - Kernel -> Quirk -> CustomSMBIOSGuid -> True
 - PlatformInfo -> UpdateSMBIOSMode -> Custom
 
-## Chỉnh cài đặt firmware :
+### Chỉnh cài đặt firmware :
 
-### Disable
+#### Disable
 
 - Fast Boot
 
@@ -194,7 +199,7 @@ Cho skylake và mới hơn
   
   - nó phải được disable nếu bạn không tìm thấy nó có thể enable `AppleCpuPmCfgLock` hoặc `AppleXcpmCfgLock` dưới Kernel -> Quirks xem chi tiết ở mục setting config
 
-### Enable
+#### Enable
 
 - VT-x (Virtualization Support)
 - Above 4G decoding
@@ -210,7 +215,7 @@ Lưu ý : đối với các CPU Pentium hoặc Celeron, nếu các bạn muốn 
 
 Lưu ý 2 : Các cpu 11th gen desktop các bạn cần fake cpuid thành gen 10 theo hướng dẫn [tại đây](https://heavietnam.ga/2021/09/29/xxiv-fake-cpu-id/)
 
-## Check lại config
+### Check lại config
 
 > Phân này chỉ mang tính chất tham khảo
 
@@ -244,7 +249,7 @@ B7: Bấm `Check`
 
 B8: Nhìn vào những mục màu vàng hoặc màu đỏ sau đó check lại các mục theo setting config ở trên
 
-## Issue
+### Issue
 
 Nếu trong quá trình cài đặt có bất cứ lỗi nào bạn có thể tham khảo cách fix lỗi ở đây
 

@@ -1,5 +1,4 @@
 import type { NavbarConfig } from "vuepress-theme-gungnir";
-import { version } from "../meta";
 
 export const vi: NavbarConfig = [
   {
@@ -19,14 +18,24 @@ export const vi: NavbarConfig = [
     ],
   },
   {
-    text: "Tag",
-    link: "/tags/",
-    icon: "fa-tag"
-  },
-  {
     text: "Cài Đặt",
     link: "/guide/",
     icon: "md-installdesktop-outlined"
+  },
+  {
+    text: "Fix Lỗi",
+    link: "/fix/",
+    icon: "gi-auto-repair",
+  },
+  {
+    text: "Tối Ưu",
+    link: "/optimize/",
+    icon: "si-googleoptimize"
+  },
+  {
+    text: "Tag",
+    link: "/tags/",
+    icon: "fa-tag"
   },
   {
     text: "Diễn đàn",

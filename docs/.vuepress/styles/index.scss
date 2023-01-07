@@ -23,3 +23,16 @@
   display: none;
 }
 
+// Đổi font size và icon to hơn
+.site-name, .navbar .navbar-items-wrapper, .navbar-dropdown-wrapper .navbar-dropdown-title, .navbar-dropdown-wrapper .navbar-dropdown-title-mobile{
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.navbar-items .navbar-item .nav-icon{
+  margin-bottom: 5px;
+  margin-right: 8px;
+}
+.navbar-items .navbar-item .nav-icon .ov-icon{
+  width: 20px;
+}
+

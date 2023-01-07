@@ -3,10 +3,14 @@ import { addIcons } from "oh-vue-icons";
 
 import {
   IoHome,
+  CoAmd,
+  CoIntel,
+  CoNvidia,
   BiInboxesFill,
   MdForumOutlined,
   MdInstalldesktopOutlined,
-  FcSearch,
+  SiGoogleoptimize,
+  GiAutoRepair,
   CoGit,
   FaTag,
   OiGitCompare,
@@ -20,10 +24,14 @@ import {
 
 addIcons(
   IoHome,
+  CoAmd,
+  CoIntel,
+  CoNvidia,
   BiInboxesFill,
   MdForumOutlined,
   MdInstalldesktopOutlined,
-  FcSearch,
+  SiGoogleoptimize,
+  GiAutoRepair,
   RiBilibiliLine,
   FaTag,
   RiBook2Fill,

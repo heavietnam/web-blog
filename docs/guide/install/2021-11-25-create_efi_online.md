@@ -1,4 +1,9 @@
-# Cách tạo bộ cài online (recovery)
+---
+title: Cách tạo EFI Opencore Online
+subtitle: 
+author: Võ Nguyễn Hoàng Long
+date: 2021-11-25
+---
 
 > Chỉ áp dụng với OpenCore
 
@@ -100,7 +105,7 @@ python ./macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000000000 download
 ./macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000000000 -os latest download
 ```
 
-![](https://everythingforhackintosher.files.wordpress.com/2021/09/cleanshot-2021-09-14-at-19.04.38-1.png?w=904)
+<img src="https://everythingforhackintosher.files.wordpress.com/2021/09/cleanshot-2021-09-14-at-19.04.38-1.png?w=904">
 
 B5: Bỏ 2 file `BaseSystem.dmg` và `BaseSystem.chunklist` vào thư mục `com.apple.recovery.boot` ( tạo thư mục này ở thư mục gốc của ổ USB )
 
