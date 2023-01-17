@@ -204,6 +204,29 @@ Killer(R) Wi-Fi 6 AX1650i 160MHz Wireless Network Adapter (201NGW)
 
 ::: details Cách 2: Dùng AirportItIwm (Thiếu dữ liệu)
 
+B1: Tải `AirportItIwm` [tại đây](https://github.com/OpenIntelWireless/itlwm/releases)
+
+B2: thêm kext vào `EFI --> OC --> Kext` và tiến hành snapshot config
+
+> đối với clover thêm kext vào EFI --> Clover --> Kext --> Other
+
+B3: Reboot
+
+> Nếu như kext vẫn chưa hoạt động các bạn làm như sau:
+
+- Enable `Misc -> Security -> SecureBootModel`
+  
+  > hoặc
+  
+
+- Force load kext `IO80211Family` như sau:
+  
+  - B1: Mở config lên vào mục `Kernel -> Force`
+  - B2: Chỉnh config như hình (đối với những bạn dùng clover có thể convert ngược các patch này, chi tiết [tại đây](https://heavietnam.ga/2020/12/24/convert-bootloader/))
+
+![forceio802112e4f9bcdpng](https://raw.githubusercontent.com/king-dragon/image/main/2022/08/21-15-30-03-force-io80211.2e4f9bcd.png)
+
+- Chuột phải vào `IO80211Family`, chọn `Show package contents` và cho kext `AirportItlwm` vào làm plugin, sau đó bỏ kext `IO80211Family` vừa chỉnh vào EFI
 :::
 
 ::: warning LƯU Ý
@@ -220,10 +243,6 @@ Không bao giờ load chung 2 kext **ItIwm** và **AirportItwIm**
 **B2**: Thêm kext vào `EFI ==> OC ==> Kexts` và snapshot config (nếu dùng OpenCore) hoặc bỏ kext vào `EFI ==> Clover ==> Kext ==> Other` ( nếu dùng Clover )
 
 B3: Reboot
-
-
-
-
 
 ::: warning Lưu ý đối với Monterey (12)
 
