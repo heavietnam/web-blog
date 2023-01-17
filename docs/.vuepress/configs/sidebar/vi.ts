@@ -51,7 +51,8 @@ export const vi: SidebarConfig = {
       text: "Patch Phần cứng",
       children: [
         '/fix/2022-01-01-fix_sound.md',
-        '/fix/2022-01-02-fix_wifi.md',
+        '/fix/2022-01-02-fix_sleep.md',
+        '/fix/2022-01-03-fix_internet_bluetooth.md',
       ]
     },
   ]

@@ -181,9 +181,9 @@ export default defineUserConfig({
 
   plugins: [
     docsearchPlugin({
-      appId: "",
-      apiKey: "",
-      indexName: "",
+      appId: "TVFUFUXABX",
+      apiKey: "1e4c24900b3580ae0d21d7dc98735caa",
+      indexName: "hackintosh",
       locales: {
         "/": {
           placeholder: 'Gõ từ khoá để tìm kiếm',
