@@ -20,10 +20,14 @@ export const vi: SidebarConfig = {
       text: "Cài đặt Hackintosh",
       children: [
         "/guide/install/2021-11-23-create_efi_opencore.md",
+        "/guide/install/2021-11-24-create_efi_offline.md",
+        "/guide/install/2021-11-25-create_efi_online.md",
+        "/guide/install/2021-11-26-opencore_dedug.md",
+        "/guide/install/2021-11-27-opencore_legacy.md",
       ]
     },
     {
-      text: "Issues",
+      text: "Vấn đề gặp phải",
       children: [
         "/guide/issue/2021-11-01-fix-kaslr.md",
         "/guide/issue/2021-11-02-fix-stuck-log.md",
@@ -34,6 +38,20 @@ export const vi: SidebarConfig = {
         "/guide/issue/2021-11-07-popertree-error.md",
         "/guide/issue/2021-11-08-bigsur-error.md",
         "/guide/issue/2021-11-09-monterey-error.md"
+      ]
+    },
+  ],
+
+  "/fix/": [
+    {
+      text: "Giới thiệu",
+      link: '/fix/'
+    },
+    {
+      text: "Patch Phần cứng",
+      children: [
+        '/fix/2022-01-01-fix_sound.md',
+        '/fix/2022-01-02-fix_wifi.md',
       ]
     },
   ]
